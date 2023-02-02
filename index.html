@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Grid</title>
+    <style>
+        .container {
+            width: 610px;
+            margin: 100px auto;
+            background-color: pink;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 300px 300px ;
+            grid-template-rows: 300px 300px;
+        }
+        .item {
+            max-width: 300px;
+        }
+        .item1 {
+            background-color: aquamarine;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: start;
+        }
+        .item2 {
+            background-color: skyblue;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: center;
+            justify-self: center;
+            z-index: 1;
+        }
+        .item3 {
+            background-color: green;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            align-self: end;
+            justify-self: end;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Box1<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos iste distinctio facere culpa nam, omnis sequi dolore deserunt voluptatibus eaque facilis dolorum incidunt beatae corrupti est laudantium accusamus amet! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, porro. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos maxime doloremque ab dolorem ad! Ipsa quae accusantium omnis autem accusamus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aliquam? Excepturi quo, laudantium quibusdam quisquam esse in dignissimos eligendi itaque!</p></div>
+        <div class="item item2">Box2<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos iste distinctio facere culpa nam, omnis sequi dolore deserunt voluptatibus eaque facilis dolorum incidunt beatae corrupti est laudantium accusamus amet! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, porro. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos maxime doloremque ab dolorem ad! Ipsa quae accusantium omnis autem accusamus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aliquam? Excepturi quo, laudantium quibusdam quisquam esse in dignissimos eligendi itaque!</p></div>
+        <div class="item item3">Box3<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eos iste distinctio facere culpa nam, omnis sequi dolore deserunt voluptatibus eaque facilis dolorum incidunt beatae corrupti est laudantium accusamus amet! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, porro. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos maxime doloremque ab dolorem ad! Ipsa quae accusantium omnis autem accusamus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, aliquam? Excepturi quo, laudantium quibusdam quisquam esse in dignissimos eligendi itaque!</p></div>
+    </div>
+</body>
+</html>
